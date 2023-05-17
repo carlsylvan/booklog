@@ -9,7 +9,7 @@ class DB {
     }
 
     public function getAll($table) {
-        query("SELECT * FROM $table");
+        $query = "SELECT * FROM $table";
         $stmt = $this->pdo->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
