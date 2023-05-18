@@ -11,7 +11,8 @@ $bookView = new BookView();
 include 'partials/header.php';
 include 'partials/nav.php';
 
-$bookView->renderAllBooks($bookModel->getAllBooks());
+$bookView->renderAllBooksWithAuthorsAsList($bookModel->getAllBooksWithAuthors());
+
 
 include 'partials/book-form.php';
 
