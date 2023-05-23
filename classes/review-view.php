@@ -9,8 +9,10 @@ class ReviewView {
             echo "<li>
                 <h3>{$review['title']} by {$review['first_name']} {$review['last_name']}</h3>
                 <p>{$review['text']}</p>
-                <p>{$review['score']}</p>
-                <p>{$review['user']}</p>
+                <span>{$review['score']}</span>
+                <span>  //  </span>
+                <span>{$review['user_name']}</span>
+
                 </li>";
         }
     }

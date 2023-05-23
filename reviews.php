@@ -13,4 +13,6 @@ include 'partials/nav.php';
 
 $reviewView->renderAllReviews($reviewModel->getAllReviewsWithBooksAndAuthors());
 
+include 'partials/review-form.php';
+
 include 'partials/footer.php';
