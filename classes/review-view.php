@@ -6,8 +6,7 @@ class ReviewView {
         echo "<h2>Recensioner</h2>";
         echo "<ul>";
         foreach ($reviews as $review) {
-            echo "<li>"
-            . "{$review['text']}" . "</li>";
+            echo "<li>{$review['text']}</li>";
         }
     }
 }
