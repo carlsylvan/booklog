@@ -14,4 +14,6 @@ $userView = new UserView();
 include 'partials/header.php';
 include 'partials/nav.php';
 
+echo "<h2>Hej, på den här sidan kan du logga böckerna du har läst</h2>";
+
 include 'partials/footer.php';

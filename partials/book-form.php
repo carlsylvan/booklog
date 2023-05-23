@@ -4,20 +4,20 @@ require_once 'classes/author-model.php';
 
 $authorModel = new AuthorModel(connect($host, $db, $user, $password));
 ?>
-
+<h3>Lägg till bok till databasen</h3>
 <form action="form-handlers/book-form-handler.php" method="post">
     <div>
-        <label for="title">Title: </label>
+        <label for="title">Titel: </label>
         <input type="text" name="title" id="title">
     </div>
     <div>
-        <label for="year">Year published: </label>
+        <label for="year">Utgivningsår: </label>
         <input type="number" name="year" id="year">
     </div>
     <div>
-        <label for="author">Author: </label>
+        <label for="author">Författare: </label>
         <select name="authorId" id="author">
-            <option value="">-- Choose author --</option>
+            <option value="">-- Välj författare --</option>
 
             <?php 
             $authors = $authorModel->getAllAuthors();
