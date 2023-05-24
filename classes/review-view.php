@@ -7,7 +7,7 @@ class ReviewView {
         echo "<ul>";
         foreach ($reviews as $review) {
             echo "<li>
-                <h3>{$review['title']} by {$review['first_name']} {$review['last_name']}</h3>
+                <h3>{$review['title']} av {$review['first_name']} {$review['last_name']}</h3>
                 <p>{$review['text']}</p>
                 <span>{$review['score']}</span>
                 <span>  //  </span>
