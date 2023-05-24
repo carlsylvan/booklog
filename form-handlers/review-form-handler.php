@@ -9,7 +9,7 @@ if (isset($_POST['title'], $_POST['text'], $_POST['score'], $_POST['userId'], $_
     $score = filter_var($_POST['score'], FILTER_SANITIZE_NUMBER_INT);
     $userId = filter_var($_POST['userId'], FILTER_SANITIZE_NUMBER_INT);
     $bookId = filter_var($_POST['bookId'], FILTER_SANITIZE_NUMBER_INT);
-    $reviewModel->addReview($title, $text, $score, $userId, $bookId);
+    $reviewModel->addReview($text, $score, $userId, $bookId);
 }
 
 header('Location: ../reviews.php');

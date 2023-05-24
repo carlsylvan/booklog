@@ -17,4 +17,15 @@ class ReviewModel extends DB {
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function addReview($bookId, $text, $score, $userId) {
+        $sql = "INSERT INTO reviews (book_id, text, score, user_id) VALUES (:bookId, :text, :score, :userId)";
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute([
+            ':bookId' => $bookId,
+            ':text' => $text,
+            ':score' => $score,
+            ':userId' => $userId
+        ]);
+    }
+
 }
