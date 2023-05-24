@@ -8,10 +8,6 @@ $userModel = new UserModel(connect($host, $db, $user, $password));
 ?>
 <h3>Lägg till en recension till en av böckerna!</h3>
 <form action="form-handlers/review-form-handler.php" method="post">
-    <!-- <div>
-        <label for="title">Titel: </label>
-        <input type="text" name="title" id="title">
-    </div> -->
     <div>
         <label for="book">Bok: </label>
         <select name="bookId" id="book">
