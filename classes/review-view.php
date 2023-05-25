@@ -12,7 +12,7 @@ class ReviewView {
                 <span>{$review['score']}</span>
                 <span>  //  </span>
                 <span>{$review['user_name']}</span>
-                <button class='edit-review-button' data-id='{$review['id']}'>Redigera</button>
+                <a href=\"review-edit.php?id={$review['id']}\">Redigera</a>
                 </li>";
         }
     }
