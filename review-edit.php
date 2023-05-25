@@ -11,7 +11,7 @@ $reviewView = new ReviewView();
 include 'partials/header.php';
 include 'partials/nav.php';
 
-$reviewView->reviewEditForm($reviewModel->getReviewById($_GET['id']));
+$reviewView->renderEditReview($reviewModel->getReviewById($_GET['id']));
 
 include 'partials/review-form.php';
 

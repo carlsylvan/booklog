@@ -6,6 +6,13 @@ class ReviewModel extends DB {
 
     protected $table = 'reviews';
 
+    public function getReviewById(int $id) {
+        $sql = "SELECT * FROM {$this->table} WHERE id = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute([$id]);
+        return $statement->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function getAllReviewsWithBooksAndAuthors() {
         $sql = "SELECT reviews.*, books.*, authors.*, users.user_name
         FROM reviews
