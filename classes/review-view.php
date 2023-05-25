@@ -12,7 +12,11 @@ class ReviewView {
                 <span>{$review['score']}</span>
                 <span>  //  </span>
                 <span>{$review['user_name']}</span>
-
+                <form action='form-handlers/review-delete-handler.php' method='post'>
+                    <input type='hidden' name='id' value='{$review['id']}'>
+                    <input type='submit' value='Ta bort'>
+                </form>
+                
                 </li>";
         }
     }

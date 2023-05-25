@@ -23,4 +23,10 @@ class ReviewModel extends DB {
         $stmt->execute([$bookId, $text, $score, $userId]);
     }
 
+    public function deleteReview(int $id) {
+        $sql = "DELETE FROM {$this->table} WHERE id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$id]);
+    }
+
 }
